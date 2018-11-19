@@ -13,6 +13,7 @@
 		6059131121A306B90072A95C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6059131021A306B90072A95C /* Assets.xcassets */; };
 		6059131421A306B90072A95C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6059131221A306B90072A95C /* LaunchScreen.storyboard */; };
 		6059131D21A310E90072A95C /* Banking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6059131B21A310E90072A95C /* Banking.xcdatamodeld */; };
+		6059131F21A314490072A95C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6059131E21A314490072A95C /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6059131321A306B90072A95C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6059131521A306B90072A95C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6059131C21A310E90072A95C /* Banking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Banking.xcdatamodel; sourceTree = "<group>"; };
+		6059131E21A314490072A95C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				6059131221A306B90072A95C /* LaunchScreen.storyboard */,
 				6059131521A306B90072A95C /* Info.plist */,
 				6059131B21A310E90072A95C /* Banking.xcdatamodeld */,
+				6059131E21A314490072A95C /* CoreDataManager.swift */,
 			);
 			path = CoreDataDealer;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				6059130C21A306B80072A95C /* ViewController.swift in Sources */,
 				6059131D21A310E90072A95C /* Banking.xcdatamodeld in Sources */,
+				6059131F21A314490072A95C /* CoreDataManager.swift in Sources */,
 				6059130A21A306B80072A95C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
