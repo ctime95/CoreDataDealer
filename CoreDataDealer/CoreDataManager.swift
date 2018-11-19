@@ -76,5 +76,7 @@ class CoreDataManager {
         }
         context.reset()
     }
+    
+    
 
 }

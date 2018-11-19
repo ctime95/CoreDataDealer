@@ -31,10 +31,6 @@ class ViewController: UIViewController {
         updateUI()
     }
     
-    @IBAction func fetchLastRecord(_ sender: UIButton) {
-        
-    }
-
     func updateUI() {
         counter = counter + 1
         let users = manager.fetchUsers()

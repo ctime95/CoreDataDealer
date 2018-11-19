@@ -38,22 +38,13 @@
                                     <action selector="deleteRecords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yg2-XB-Y1V"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVq-OZ-VPQ">
-                                <rect key="frame" x="100.5" y="474" width="174" height="30"/>
-                                <state key="normal" title="Recuperar último registro"/>
-                                <connections>
-                                    <action selector="fetchLastRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e4R-0F-4eU"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FVq-OZ-VPQ" firstAttribute="top" secondItem="nJf-pt-8x7" secondAttribute="bottom" constant="20" id="0Wc-ZY-qjs"/>
                             <constraint firstItem="nJf-pt-8x7" firstAttribute="top" secondItem="dfE-HR-3Sp" secondAttribute="bottom" constant="20" id="6Ij-jR-1h7"/>
                             <constraint firstItem="nJf-pt-8x7" firstAttribute="centerX" secondItem="dfE-HR-3Sp" secondAttribute="centerX" id="95F-3K-m5c"/>
                             <constraint firstItem="dfE-HR-3Sp" firstAttribute="top" secondItem="Qe6-Zp-Lpm" secondAttribute="bottom" constant="30" id="ALu-TH-UYA"/>
                             <constraint firstItem="Qe6-Zp-Lpm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DDW-A5-efh"/>
-                            <constraint firstItem="FVq-OZ-VPQ" firstAttribute="centerX" secondItem="nJf-pt-8x7" secondAttribute="centerX" id="gJ7-WQ-1Rx"/>
                             <constraint firstItem="Qe6-Zp-Lpm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oec-zy-srV"/>
                             <constraint firstItem="dfE-HR-3Sp" firstAttribute="centerX" secondItem="Qe6-Zp-Lpm" secondAttribute="centerX" id="twx-gN-uOU"/>
                         </constraints>
