@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G3025" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Account" representedClassName="Account" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" attributeType="Double" minValueString="1000" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="openingDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="belongsTo" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="accounts" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="age" attributeType="Integer 16" minValueString="18" maxValueString="100" defaultValueString="18" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="email" attributeType="String" regularExpressionString="^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" syncable="YES"/>
+        <attribute name="lastName" attributeType="String" minValueString="2" maxValueString="255" syncable="YES"/>
+        <attribute name="name" attributeType="String" minValueString="2" maxValueString="255" syncable="YES"/>
+        <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Account" inverseName="belongsTo" inverseEntity="Account" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="User" positionX="-5706.2421875" positionY="340.28125" width="128" height="120"/>
+        <element name="Account" positionX="-5490.65625" positionY="338.65625" width="128" height="105"/>
+    </elements>
+</model>
