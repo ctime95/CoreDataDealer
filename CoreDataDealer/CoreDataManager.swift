@@ -30,25 +30,29 @@ class CoreDataManager {
     
     func createUser(name : String, lastName : String, email : String, initialAmount : Double, completion: @escaping() -> Void) {
         
-        let context = container.viewContext
-        
-        let user = User(context: context)
-        user.name = name
-        user.lastName = lastName
-        user.email = email
-        
-        let account = Account(context: context)
-        account.name = "Cuenta de \(name)"
-        account.amount = initialAmount
-        account.openingDate = Date()
-        account.belongsTo = user
-        
-        do {
-            try context.save()
-            print("Usuario \(name) guardado")
-            completion()
-        } catch {
-            print("Error guardando usuario - \(error)")
+        container.performBackgroundTask { (context) in
+           
+            for _ in 0...100000 {
+                let user = User(context: context)
+                user.name = name
+                user.lastName = lastName
+                user.email = email
+                
+                let account = Account(context: context)
+                account.name = "Cuenta de \(name)"
+                account.amount = initialAmount
+                account.openingDate = Date()
+                account.belongsTo = user
+            }
+            do {
+                try context.save()
+                print("Usuario \(name) guardado")
+                DispatchQueue.main.async {
+                    completion()
+                }
+            } catch {
+                print("Error guardando usuario - \(error)")
+            }
         }
         
     }
