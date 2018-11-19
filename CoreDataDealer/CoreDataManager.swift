@@ -69,11 +69,12 @@ class CoreDataManager {
         let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
         let deleteBatch = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
         do {
-            let result = try context.execute(deleteBatch)
+            try context.execute(deleteBatch)
             print("Exito borrando usuarios")
-        }catch {
+        } catch {
             print("Error Borrando los usuarios \(error)")
         }
+        context.reset()
     }
 
 }
