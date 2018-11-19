@@ -8,7 +8,7 @@
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="age" attributeType="Integer 16" minValueString="18" maxValueString="100" defaultValueString="18" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="email" attributeType="String" regularExpressionString="^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" syncable="YES"/>
+        <attribute name="email" attributeType="String" syncable="YES"/>
         <attribute name="lastName" attributeType="String" minValueString="2" maxValueString="255" syncable="YES"/>
         <attribute name="name" attributeType="String" minValueString="2" maxValueString="255" syncable="YES"/>
         <relationship name="accounts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Account" inverseName="belongsTo" inverseEntity="Account" syncable="YES"/>

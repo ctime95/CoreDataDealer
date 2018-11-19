@@ -28,4 +28,52 @@ class CoreDataManager {
         }
     }
     
+    func createUser(name : String, lastName : String, email : String, initialAmount : Double, completion: @escaping() -> Void) {
+        
+        let context = container.viewContext
+        
+        let user = User(context: context)
+        user.name = name
+        user.lastName = lastName
+        user.email = email
+        
+        let account = Account(context: context)
+        account.name = "Cuenta de \(name)"
+        account.amount = initialAmount
+        account.openingDate = Date()
+        account.belongsTo = user
+        
+        do {
+            try context.save()
+            print("Usuario \(name) guardado")
+            completion()
+        } catch {
+            print("Error guardando usuario - \(error)")
+        }
+        
+    }
+    
+    func fetchUsers() -> [User] {
+        let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
+        do {
+            let result = try container.viewContext.fetch(fetchRequest)
+            return result
+        } catch {
+            print("El error obteniendo usuario(s) \(error)")
+        }
+        return []
+    }
+    
+    func deleteUsers() {
+        let context = container.viewContext
+        let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
+        let deleteBatch = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+        do {
+            let result = try context.execute(deleteBatch)
+            print("Exito borrando usuarios")
+        }catch {
+            print("Error Borrando los usuarios \(error)")
+        }
+    }
+
 }
