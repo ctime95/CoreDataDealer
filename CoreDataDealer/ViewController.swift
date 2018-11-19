@@ -10,9 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var summaryLabel: UILabel! {
+        didSet {
+            summaryLabel.text = "Intento: \(0)\r\nRegistros en la base: \(0)\r\nÚltimo registro: nil"
+        }
+    }
+    
+    
+    @IBAction func createRecords(_ sender: UIButton) {
+    }
+    
+    @IBAction func deleteRecords(_ sender: UIButton) {
+    }
+    
+    @IBAction func fetchLastRecord(_ sender: UIButton) {
     }
 
 

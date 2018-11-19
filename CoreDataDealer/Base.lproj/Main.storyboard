@@ -27,14 +27,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfE-HR-3Sp">
                                 <rect key="frame" x="136.5" y="374" width="102" height="30"/>
                                 <state key="normal" title="Crear registros"/>
+                                <connections>
+                                    <action selector="createRecords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFb-jH-jtm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJf-pt-8x7">
                                 <rect key="frame" x="133.5" y="424" width="108" height="30"/>
                                 <state key="normal" title="Borrar registros"/>
+                                <connections>
+                                    <action selector="deleteRecords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yg2-XB-Y1V"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVq-OZ-VPQ">
                                 <rect key="frame" x="100.5" y="474" width="174" height="30"/>
                                 <state key="normal" title="Recuperar último registro"/>
+                                <connections>
+                                    <action selector="fetchLastRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e4R-0F-4eU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,6 +59,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="summaryLabel" destination="Qe6-Zp-Lpm" id="Zem-tU-3vw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
